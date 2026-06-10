@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affichage SNCF</title>
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="btn" id="departs">Départs</div>
-    <div class="btn" id="arrivees">Arrivées</div>
-    <div class="btn" id="flash">Flash</div>
+    <h1>Affichage SNCF</h1>
+    <div id="btn-container">
+        <a href="departs">
+            <div class="btn" id="btn-departs">Départs</div>
+        </a>
+        <a href="arrivees">
+            <div class="btn" id="btn-arrivees">Arrivées</div>
+        </a>
+        <a href="flash">
+            <div class="btn" id="btn-flash">Flash</div>
+        </a>
+    </div>
+
+
     <script src="main.js"></script>
 </body>
 </html>

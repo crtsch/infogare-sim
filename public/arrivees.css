@@ -1,0 +1,7 @@
+body {
+    background-color: var(--vert2);
+}
+
+.pair {
+    background-color: var(--vert1);
+}

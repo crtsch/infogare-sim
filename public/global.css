@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Achemine';
+    src: url(assets/achemine_regular.ttf);
+}
+
+@font-face {
+    font-family: 'AchemineBold';
+    src: url(assets/achemine_bold.ttf);
+}
+
+@font-face {
+    font-family: 'AchemineItalic';
+    src: url(assets/achemine_italic.ttf);
+}
+
+:root {
+    --bleu1: #085da0;
+    --bleu2: #043673;
+    --vert1: #2b7932;
+    --vert2: #275626;
+    --jaune: #f9fc3e;
+    --jaune2: #ffd000;
+}
+
+* {
+    font-family: 'Achemine';
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
