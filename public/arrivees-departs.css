@@ -1,109 +1,73 @@
 body {
-    margin: 0;
-}
-
-p {
-    margin: 0;
-}
-
-.train {
     color: white;
-    height: auto;
-    width: 100%;
-    box-sizing: border-box;
-    --destination-size: 80px;
     margin: 0;
-    display: grid;
-    grid-template-columns: auto auto auto 1fr auto;
-    grid-template-rows: auto auto;
-    gap: 0.75em;
-    padding-inline: 20px;
-    padding-top: 20px;
-    padding-bottom: 10px;
 }
 
-.haut, .bas {
-    /* allow their children to participate directly in the parent grid */
-    display: contents;
+#liste-trains {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.haut {
-    /* padding handled on .train */
-}
-
-.bas {
-    /* padding handled on .train */
-}
-
-.operateur-logo, .voie, .etat-num, .heure, .destination {
-    box-sizing: border-box;
-}
-
-.etat-num, .heure, .destination {
-    align-self: end;
-}
-
-.operateur-logo img,
-.voie img {
-    display: block;
-    height: var(--destination-size);
-    width: auto;
-}
-
-.etat-num,
-.heure,
-.destination,
-.liste-arrets {
-    line-height: 1;
-}
-
-.destination {
-    min-width: 0;
+.train td {
+    padding: 15px 10px;
 }
 
 .voie {
-    /* positioned by grid */
+    padding-right: 15px !important;
 }
 
+.train-arrets td {
+    padding: 0 0 15px 0;
+}
 
+.operateur, .voie {
+    text-align: center;
+    vertical-align: middle;
+}
 
-/* Couleurs et tailles */
+.operateur img, .voie img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 1.1em;
+}
 
-.etat-num {
+.etat, .heure, .destination {
+    padding-inline: 15px;
+}
+
+.destination {
+    width: 100%;
+    text-align: left;
+}
+
+.destination, .operateur, .voie {
+    font-size: 80px;
+}
+
+.etat, .heure {
     font-family: 'AchemineBold';
+}
+
+.etat {
     font-size: 30px;
 }
 
 .heure {
-    font-family: 'AchemineBold';
-    font-size: 50px;
     color: var(--jaune);
+    font-size: 60px;
 }
 
-.destination {
-    font-size: var(--destination-size);
+.operateur {
+    padding-right: 15px;
 }
 
-.liste-arrets {
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.7);
-    grid-column: 2 / 6;
-    justify-self: start;
-    align-self: center;
+.arrets {
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.7)
 }
 
-.logo-space {
-    width: var(--destination-size);
-    height: var(--destination-size);
-}
-
-.filigrane {
-    font-family: 'AchemineBold';
-    color: white;
-    opacity: 0.3;
-    position: fixed;
-    transform: rotate(-90deg);
-    bottom: 240px;
-    right: -200px;
-    font-size: 200px;
+.sep {
+    width: 0.3em;
+    padding-inline: 15px;
 }

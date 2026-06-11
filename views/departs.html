@@ -9,78 +9,93 @@
     <link rel="stylesheet" href="arrivees-departs.css">
 </head>
 <body>
-    <p class="filigrane">départs</p>
-    <div class="train pair">
-        <div class="haut">
-            <div class="operateur-logo">
-                <img src="assets/icones/sncf.png">
-            </div>
-            <div class="etat-num">à l'heure</div>
-            <div class="heure">22h52</div>
-            <div class="destination">Offenburg</div>
-            <div class="voie">
-                <img src="assets/icones/voie/31.png">
-            </div>
-        </div>
-        <div class="bas">
-            <div class="logo-space" aria-hidden="true"></div>
-            <p class="liste-arrets">Strasbourg <span class="sep"><svg width="30" height="30" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3.2" style="fill: var(--jaune);"/></svg></span> Metz <span class="sep"><svg width="30" height="30" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3.2" style="fill: var(--jaune);"/></svg></span> Reims</p>
-        </div>
-    </div>
-    <div class="train">
-        <div class="haut">
-            <div class="operateur-logo">
-                <img src="assets/icones/sncf.png">
-            </div>
-            <div class="etat-num">à l'heure</div>
-            <div class="heure">23h02</div>
-            <div class="destination">Paris Gare de Lyon</div>
-            <div class="voie">
-                <img src="assets/icones/voie/3.png">
-            </div>
-        </div>
-        <div class="bas">
-            <div class="logo-space" aria-hidden="true"></div>
-            <p class="liste-arrets">Strasbourg <span class="sep"><svg width="30" height="30" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3.2" style="fill: var(--jaune);"/></svg></span> Metz <span class="sep"><svg width="30" height="30" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3.2" style="fill: var(--jaune);"/></svg></span> Reims</p>
-        </div>
-    </div>
-    <div class="train pair">
-        <div class="haut">
-            <div class="operateur-logo">
-                <img src="assets/icones/sncf.png">
-            </div>
-            <div class="etat-num">à l'heure</div>
-            <div class="heure">23h02</div>
-            <div class="destination">Paris Gare de Lyon</div>
-            <div class="voie">
-                <img src="assets/icones/voie/3.png">
-            </div>
-        </div>
-        <div class="bas">
-            <div class="logo-space" aria-hidden="true"></div>
-            <p class="liste-arrets">Strasbourg <span class="sep"><svg width="30" height="30" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3.2" style="fill: var(--jaune);"/></svg></span> Metz <span class="sep"><svg width="30" height="30" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3.2" style="fill: var(--jaune);"/></svg></span> Reims</p>
-        </div>
-    </div>
-    <div class="train">
-        <div class="haut">
-            <div class="operateur-logo">
-                <img src="assets/icones/sncf.png">
-            </div>
-            <div class="etat-num">à l'heure</div>
-            <div class="heure">23h02</div>
-            <div class="destination">Paris Gare de Lyon</div>
-            <div class="voie">
-                <img src="assets/icones/voie/3.png">
-            </div>
-        </div>
-        <div class="bas">
-            <div class="logo-space" aria-hidden="true"></div>
-            <p class="liste-arrets">Strasbourg <span class="sep"><svg width="30" height="30" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3.2" style="fill: var(--jaune);"/></svg></span> Metz <span class="sep"><svg width="30" height="30" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="3.2" style="fill: var(--jaune);"/></svg></span> Reims</p>
-        </div>
-    </div>
-    
+    <table id="liste-trains">
+            <tr class="clair train">
+                <td class="operateur">
+                    <img src="assets/logo/sncf.png">
+                </td>
+                <td class="etat">à&nbsp;l'heure</td>
+                <td class="heure">15h43</td>
+                <td class="destination">Tours</td>
+                <td class="voie">
+                    <img src="assets/voie/2.png">
+                </td>
+            </tr>
+            <tr class="clair train-arrets">
+                <td></td>
+                <td class="arrets" colspan="4">Futuroscope . Châtellerault . Tours</td>
+            </tr>
+            <tr class="train">
+                <td class="operateur">
+                    <img src="assets/logo/sncf.png">
+                </td>
+                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
+                <td class="heure">15h47</td>
+                <td class="destination">Bordeaux St Jean</td>
+                <td class="voie">
+                    <img src="assets/voie/16.png">
+                </td>
+            </tr>
+            <tr class="train clair">
+                <td class="operateur">
+                    <img src="assets/logo/sncf.png">
+                </td>
+                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
+                <td class="heure">15h47</td>
+                <td class="destination">Bordeaux St Jean</td>
+                <td class="voie">
+                    <img src="assets/voie/16.png">
+                </td>
+            </tr>
+            <tr class="train">
+                <td class="operateur">
+                    <img src="assets/logo/sncf.png">
+                </td>
+                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
+                <td class="heure">15h47</td>
+                <td class="destination">Bordeaux St Jean</td>
+                <td class="voie">
+                    <img src="assets/voie/16.png">
+                </td>
+            </tr>
+            <tr class="train clair">
+                <td class="operateur">
+                    <img src="assets/logo/sncf.png">
+                </td>
+                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
+                <td class="heure">15h47</td>
+                <td class="destination">Bordeaux St Jean</td>
+                <td class="voie">
+                    <img src="assets/voie/16.png">
+                </td>
+            </tr>
+            <tr class="train">
+                <td class="operateur">
+                    <img src="assets/logo/sncf.png">
+                </td>
+                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
+                <td class="heure">15h47</td>
+                <td class="destination">Bordeaux St Jean</td>
+                <td class="voie">
+                    <img src="assets/voie/16.png">
+                </td>
+            </tr>
+            <tr class="train clair">
+                <td class="operateur">
+                    <img src="assets/logo/sncf.png">
+                </td>
+                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
+                <td class="heure">15h47</td>
+                <td class="destination">Bordeaux St Jean</td>
+                <td class="voie">
+                    <img src="assets/voie/16.png">
+                </td>
+            </tr>
+    </table>
 
 
     <script src="departs.js"></script>
+    <script src="horloge.js"></script>
+    <script src="arrivees-departs.js"></script>
 </body>
 </html>

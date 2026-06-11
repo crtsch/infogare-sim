@@ -30,3 +30,31 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+
+#horloge {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    background-color: var(--bleu2);
+    border: 5px solid white;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+#horloge p {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    padding: 5px 20px 2px 20px;
+}
+
+#secondes {
+    padding-left: 10px;
+    font-size: 30px;
+    color: var(--jaune2);
+}
+
+#heures, #minutes {
+    font-family: 'AchemineBold';
+}

@@ -8,35 +8,32 @@ body {
 }
 
 #titre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
     background-color: var(--bleu2);
     width: 50%;
 }
 
-span {
-    font-family: 'AchemineBold';
-}
-
 #s1 {
     color: var(--jaune2);
+    font-family: 'AchemineBold';
 }
 
 #s2 {
     color: white;
+    font-family: 'AchemineBold';
 }
 
 #titre p {
-    margin: 0;
-    display: inline-block;
-    transform: rotate(-90deg);
-    transform-origin: center center;
-    white-space: nowrap;
     position: absolute;
-    left: -40px;
-    bottom: 255px;
-    
+    bottom: -300px;
+    left: 45%;
+    transform-origin: 0% 0%;
+    transform: rotate(-90deg);
+    margin: 0;
+    white-space: nowrap;
+    text-align: left;
+    line-height: 0.9;
     font-size: 180px;
 }
 
