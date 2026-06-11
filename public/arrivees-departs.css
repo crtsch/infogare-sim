@@ -9,7 +9,7 @@ body {
 }
 
 .train td {
-    padding: 15px 10px;
+    padding: 15px 20px;
 }
 
 .voie {
@@ -17,7 +17,7 @@ body {
 }
 
 .train-arrets td {
-    padding: 0 0 15px 0;
+    padding: 0 0 15px 20px;
 }
 
 .operateur, .voie {
@@ -30,10 +30,6 @@ body {
     height: auto;
     margin: 0 auto;
     width: 1.1em;
-}
-
-.etat, .heure, .destination {
-    padding-inline: 15px;
 }
 
 .destination {
@@ -59,7 +55,7 @@ body {
 }
 
 .operateur {
-    padding-right: 15px;
+    padding-left: 30px !important;
 }
 
 .arrets {
@@ -70,4 +66,15 @@ body {
 .sep {
     width: 0.3em;
     padding-inline: 15px;
+}
+
+#filigrane {
+    margin: 0;
+    position: fixed;
+    transform: rotate(-90deg);
+    bottom: 420px;
+    right: -335px;
+    font-family: 'AchemineBold';
+    font-size: 270px;
+    opacity: 0.25;
 }
