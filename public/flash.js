@@ -1,6 +1,12 @@
-const msgTexte = document.getElementById("msg-texte");
+async function updateMsg() {
+    const reponse = await fetch("/flashmsg");
+    const message = await reponse.json();
+    const msg = document.getElementById("msg-texte");
+    msg.innerHTML = "Tout va bien :)";
+    console.log(message[0].long);
+    if(message[0].long) {
+        msg.innerHTML = message[0].long;
+    }
+}
 
-document.getElementById("message").addEventListener("click", () => {
-    newText = prompt("Message (<br> pour sauter des lignes)", msgTexte.innerHTML);
-    msgTexte.innerHTML = (newText == "" || newText == null) ? msgTexte.innerHTML : newText;
-})
+updateMsg();

@@ -10,94 +10,15 @@
 </head>
 <body>
     <table id="liste-trains">
-            <tr class="clair train">
-                <td class="operateur">
-                    <img src="assets/logo/sncf.png">
-                </td>
-                <td class="etat">à&nbsp;l'heure</td>
-                <td class="heure">15h43</td>
-                <td class="destination">Tours</td>
-                <td class="voie">
-                    <img src="assets/voie/2.png">
-                </td>
-            </tr>
-            <tr class="clair train-arrets">
-                <td></td>
-                <td class="arrets" colspan="4">Futuroscope . Châtellerault . Tours</td>
-            </tr>
-            <tr class="train">
-                <td class="operateur">
-                    <img src="assets/logo/sncf.png">
-                </td>
-                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
-                <td class="heure">15h47</td>
-                <td class="destination">Bordeaux St Jean</td>
-                <td class="voie">
-                    <img src="assets/voie/16.png">
-                </td>
-            </tr>
-            <tr class="train clair">
-                <td class="operateur">
-                    <img src="assets/logo/sncf.png">
-                </td>
-                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
-                <td class="heure">15h47</td>
-                <td class="destination">Bordeaux St Jean</td>
-                <td class="voie">
-                    <img src="assets/voie/16.png">
-                </td>
-            </tr>
-            <tr class="train">
-                <td class="operateur">
-                    <img src="assets/logo/sncf.png">
-                </td>
-                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
-                <td class="heure">15h47</td>
-                <td class="destination">Bordeaux St Jean</td>
-                <td class="voie">
-                    <img src="assets/voie/16.png">
-                </td>
-            </tr>
-            <tr class="train clair">
-                <td class="operateur">
-                    <img src="assets/logo/sncf.png">
-                </td>
-                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
-                <td class="heure">15h47</td>
-                <td class="destination">Bordeaux St Jean</td>
-                <td class="voie">
-                    <img src="assets/voie/16.png">
-                </td>
-            </tr>
-            <tr class="train">
-                <td class="operateur">
-                    <img src="assets/logo/sncf.png">
-                </td>
-                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
-                <td class="heure">15h47</td>
-                <td class="destination">Bordeaux St Jean</td>
-                <td class="voie">
-                    <img src="assets/voie/16.png">
-                </td>
-            </tr>
-            <tr class="train clair">
-                <td class="operateur">
-                    <img src="assets/logo/sncf.png">
-                </td>
-                <td class="etat" style="color: var(--jaune)">retard 30&nbsp;min.</td>
-                <td class="heure">15h47</td>
-                <td class="destination">Bordeaux St Jean</td>
-                <td class="voie">
-                    <img src="assets/voie/16.png">
-                </td>
-            </tr>
     </table>
 
     <p id="filigrane">départs</p>
 
+    <div id="flash-bas">
+        <p id="flash-texte"></p>
+    </div>
 
-    <script src="departs.js"></script>
+    <script type="module" src="departs.js"></script>
     <script src="horloge.js"></script>
-    <script src="arrivees-departs.js"></script>
 </body>
 </html>

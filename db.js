@@ -12,22 +12,16 @@ export async function initDB() {
     await dbInstance.exec(`
             CREATE TABLE IF NOT EXISTS trajets (
                 id              INTEGER     PRIMARY KEY AUTOINCREMENT,
-                idTrain         INTEGER     NOT NULL,
-                type            TEXT        NOT NULL DEFAULT 'depart',
-                typeTrain       TEXT        NOT NULL DEFAULT 'SNCF',
+                idTrain         TEXT        NOT NULL,
+                operateur       TEXT        NOT NULL DEFAULT 'SNCF',
+                etat            TEXT,
+                horaire         TIME        NOT NULL,
                 quai            TEXT        NOT NULL,
                 provenance      TEXT        NOT NULL,
                 destination     TEXT        NOT NULL,
                 arrets          TEXT,
                 retard          INT         NOT NULL DEFAULT 0
 
-            );
-
-            CREATE TABLE IF NOT EXISTS typestrains (
-                id              INTEGER     PRIMARY KEY AUTOINCREMENT,
-                nom             TEXT        NOT NULL,
-                nomAff          TEXT        NOT NULL DEFAULT 'SNCF',
-                logo            TEXT        NOT NULL DEFAULT 'sncf.png'
             );
 
             CREATE TABLE IF NOT EXISTS flash (

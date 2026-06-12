@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Achemine';
-    src: url(assets/achemine_regular.ttf);
+    src: url(fonts/achemine_regular.ttf);
 }
 
 @font-face {
     font-family: 'AchemineBold';
-    src: url(assets/achemine_bold.ttf);
+    src: url(fonts/achemine_bold.ttf);
 }
 
 @font-face {
     font-family: 'AchemineItalic';
-    src: url(assets/achemine_italic.ttf);
+    src: url(fonts/achemine_italic.ttf);
 }
 
 :root {
@@ -33,7 +33,7 @@ a {
 
 
 #horloge {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 10px;
     background-color: var(--bleu2);

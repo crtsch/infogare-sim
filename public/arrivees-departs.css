@@ -77,4 +77,30 @@ body {
     font-family: 'AchemineBold';
     font-size: 270px;
     opacity: 0.25;
+    cursor: default;
+}
+
+#flash-bas {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--jaune2);
+    color: var(--bleu2);
+    font-size: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+#flash-texte {
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+    transform: translateX(100vw);
+    animation: move var(--flash-duration, 20s) linear infinite;
+}
+
+@keyframes move {
+    to { transform: translateX(calc(-100% - 15px)); }
 }
