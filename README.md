@@ -52,3 +52,9 @@ npm install express sqlite sqlite3
 ```bash
 npm start
 ```
+
+## Captures d'écran
+
+![Écran des départs](public/screenshots/departs.png)
+![Écran des arrivées](public/screenshots/arrivees.png)
+![Écran flash circulation](public/screenshots/flash.png)
