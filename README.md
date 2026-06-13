@@ -2,6 +2,8 @@
 
 **Ce projet est une reconsitution des écrans d'information voyageurs de la SNCF.**
 
+**Démo : [https://infogare.cruetsch.fr/](https://infogare.cruetsch.fr/)**
+
 ## Fonctionnalités
 
 - Écrans des départs et des arrivées
