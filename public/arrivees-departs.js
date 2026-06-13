@@ -93,7 +93,7 @@ export async function displayTrains(ecran) {
   if(ecran == "arrivees") {
     for (const train of trains) {
       if(train.provenance != gare) {
-        ajouterTrain(train.idTrain, train.operateur, train.etat, train.horaire, train.destination, train.quai, train.arrets.split(` . ${gare} . `).length > 1 ? train.arrets.split(` . ${gare} . `)[0] : train.arrets, train.retard, i);
+        ajouterTrain(train.idTrain, train.operateur, train.etat, train.horaire, train.provenance, train.quai, train.arrets.split(` . ${gare} . `).length > 1 ? train.arrets.split(` . ${gare} . `)[0] : train.arrets, train.retard, i);
         i++;
       }
     }
