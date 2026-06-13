@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  recettes-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: infogare
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
