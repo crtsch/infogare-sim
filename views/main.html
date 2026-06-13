@@ -9,18 +9,29 @@
 </head>
 <body>
     <h1>Affichage SNCF</h1>
-    <div id="btn-container">
+    <div class="btn-container">
         <a href="departs">
             <div class="btn" id="btn-departs">Départs</div>
         </a>
         <a href="arrivees">
             <div class="btn" id="btn-arrivees">Arrivées</div>
         </a>
-        <a href="flash">
-            <div class="btn" id="btn-flash">Flash</div>
+        <div id="flash-container" class="btn">
+            <a href="flash">
+                <div class="btn btn-flash" id="flash-btn">Flash</div>
+            </a>
+            <a href="customflash">
+                <div class="btn btn-flash" id="custom-flash-btn">Flash custom</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="">
+            <div class="btn" id="btn-edit">Edit</div>
         </a>
-        <a href="customflash">
-            <div class="btn" id="btn-flash">Flash custom</div>
+        <a href="">
+            <div class="btn" id="btn-edit-flash">Edit Flash</div>
         </a>
     </div>
 

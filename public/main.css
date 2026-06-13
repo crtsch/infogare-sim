@@ -15,7 +15,7 @@ body {
     color: white
 }
 
-#btn-container {
+.btn-container {
     width: 100%;
 }
 
@@ -34,6 +34,10 @@ body {
     transition: 0.5s ease;
 }
 
+.btn-container > a {
+    display: block;
+}
+
 
 #btn-departs {
     background-color: rgba(0, 89, 255, 0.5);
@@ -43,7 +47,31 @@ body {
     background-color: rgba(0, 190, 0, 0.5);
 }
 
-#btn-flash {
+#flash-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 40px;
+    width: 80%;
+    margin-inline: 10%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: auto;
+    background: transparent;
+    cursor: default;
+}
+
+#flash-container > a {
+    flex: 1 1 0;
+    display: flex;
+}
+
+#flash-container .btn {
+    width: 100%;
+    margin: 0;
+}
+
+.btn-flash {
     background-color: rgba(197, 168, 0, 0.5);
 }
 
@@ -55,7 +83,24 @@ body {
     background-color: rgb(0, 190, 0);
 }
 
-#btn-flash:hover {
+.btn-flash:hover {
     background-color: rgb(197, 168, 0);
     color: black;
+}
+
+#flash-btn {
+    margin-right: 0 !important;
+}
+
+#custom-flash-btn {
+    margin-left: 0 !important;
+}
+
+#btn-edit, #btn-edit-flash {
+    background-color: rgba(170, 214, 255, 0.5);
+    cursor: not-allowed;
+}
+
+#btn-edit:hover, #btn-edit-flash:hover {
+    background-color: rgba(170, 214, 255, 1);
 }

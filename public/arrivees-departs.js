@@ -37,7 +37,15 @@ async function ajouterTrain(id, operateur, etat, heure, destination, voie, arret
     e = `<td class="etat" style="color: var(--jaune)">supprimé</td>`;
   }
   const train = document.createElement("tr");
-  train.id = id;
+  train.dataset.trainid = id;
+  train.dataset.etat = "h";
+  if (etat == "supprimé") {
+    train.dataset.etat = "s";
+  }
+  if (etat == "retard") {
+    train.dataset.etat = `r-${retard}`;
+  }
+
   train.classList.add("train");
   train.innerHTML = `<td class="operateur">
   <img src="assets/logo/${operateur.toLowerCase()}.png">
@@ -92,7 +100,7 @@ export async function displayTrains(ecran) {
   }
 }
 
-async function updateFlash() {
+export async function updateFlash() {
     const reponse = await fetch("/flashmsg");
     const message = await reponse.json();
     const msg = document.getElementById("flash-bas");
@@ -110,33 +118,50 @@ async function updateFlash() {
     }
 }
 
-// NE MARCHE PAS : il faudrait réussir à faire proprement le lien avec la db
-// async function switchEtat() {
-//   const trains = document.getElementsByClassName("train");
-//   for (const train of trains) {
-//     const etat = train.querySelector('.etat');
-//     if(train.etat == "à l'heure") {
-//       etat.style.color = "white";
-//       etat.innerText = "à&nbsp;l'heure";
-//     }
-//     if(train.etat == "retard") {
-//       etat.style.color = "var(--jaune)";
-//       etat.innerText = `retard ${formatRetard(train.retard)}`;
-//     }
-//     if(train.etat == "supprimé") {
-//       etat.style.color = "var(--jaune)";
-//       etat.innerText = "supprimé";
-//     }
-//   }
-//   for (const train of trains) {
-//     const etat = train.querySelector('.etat');
-//     const trainId = train.id.split(" ");
-//     etat.style.color = "white";
-//     etat.innerHTML = `${trainId[0]}<br><b>${trainId[1]}</b>`
-//   }
-// }
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
 
+let switchEtatTimer = null;
 
-updateArrets();
+function afficherEtatTrains(mode) {
+  const trains = document.getElementsByClassName("train");
 
-updateFlash();
+  for (const train of trains) {
+    const etatDisp = train.querySelector(".etat");
+
+    if (mode === 0) {
+      if (train.dataset.etat == "h") {
+        etatDisp.style.color = "white";
+        etatDisp.innerHTML = "à&nbsp;l'heure";
+      }
+      if (train.dataset.etat[0] == "r") {
+        const retard = train.dataset.etat.split("-")[1];
+        etatDisp.style.color = "var(--jaune)";
+        etatDisp.innerText = `retard ${formatRetard(retard)}`;
+      }
+      if (train.dataset.etat == "s") {
+        etatDisp.style.color = "var(--jaune)";
+        etatDisp.innerText = "supprimé";
+      }
+    } else {
+      const trainId = train.dataset.trainid.split(" ");
+      etatDisp.style.color = "white";
+      etatDisp.innerHTML = `<span style="font-family: 'Achemine'">${trainId[0]}</span><br><span style="font-family: 'AchemineBold'">${trainId[1]}</span>`;
+    }
+  }
+}
+
+export function switchEtat() {
+  if (switchEtatTimer !== null) {
+    return;
+  }
+
+  let mode = 0;
+  afficherEtatTrains(mode);
+
+  switchEtatTimer = setInterval(() => {
+    mode = mode === 0 ? 1 : 0;
+    afficherEtatTrains(mode);
+  }, 3000);
+}
